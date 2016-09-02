@@ -1,5 +1,5 @@
-lab1: main.o LinkedList.o Node.o
-	g++ -g -Wall main.o LinkedList.o Node.o -o lab1
+lab2: main.o LinkedList.o Node.o
+	g++ -g -Wall main.o LinkedList.o Node.o -o lab2
 
 main.o: main.cpp LinkedList.h Node.h
 	g++ -g -c -Wall main.cpp

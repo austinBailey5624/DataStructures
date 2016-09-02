@@ -19,9 +19,10 @@ class LinkedList
 		void setFront(Node* front);
 		void populateFromFile();
 	 	bool erase(int value);
-		int find(int value);
+		bool find(int value);
 		void reverse();
-		void concatenate();
+		void reverseHelper(int first, int last);
+		void concatenate(std::ifstream& file);
 	private:
 		Node* m_front;
 };

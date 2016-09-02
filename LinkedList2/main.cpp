@@ -5,7 +5,7 @@
 */
 
 #include <iostream>
-
+#include <fstream>
 #include "LinkedList.h"
 #include "Node.h"
 
@@ -53,7 +53,8 @@ int main()
 		}
 		else if(choice==4)
 		{
-			myLinkedList->concatenate();
+			std::ifstream file2("data2.txt");
+			myLinkedList->concatenate(file2);
 		}
 		else if(choice==5)
 		{
