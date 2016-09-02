@@ -18,7 +18,7 @@ class LinkedList
 		Node* getFront()const;
 		void setFront(Node* front);
 		void populateFromFile();
-		void delete(int value);
+	 	bool erase(int value);
 		int find(int value);
 		void reverse();
 		void concatenate();

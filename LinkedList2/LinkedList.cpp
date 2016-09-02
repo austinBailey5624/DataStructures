@@ -51,7 +51,7 @@ void LinkedList::insert(int value)
 	temp2->setNext(temp);
 }
 
-bool LinkedList::delete(int value)//returns true if the value is deleted false else
+bool LinkedList::erase(int value)//returns true if the value is deleted false else
 {
 	//first use find() to determine if its in the list -if not return false
 	//then delete the node
@@ -69,7 +69,7 @@ void LinkedList::reverse()
 
 void LinkedList::concatenate()
 {
-	
+
 }
 void LinkedList::print()
 {

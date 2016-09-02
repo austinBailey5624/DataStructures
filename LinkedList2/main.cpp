@@ -36,9 +36,9 @@ int main()
 		}
 		else if(choice==2)
 		{
-			std::cout << "Choose a number to be deleted from the list\n"
+			std::cout << "Choose a number to be deleted from the list\n";
 			std::cin >> choice;
-			if(myLinkedList->delete(choice));
+			if(myLinkedList->erase(choice))
 			{
 				std::cout << "Deleted Successfully";
 			}
