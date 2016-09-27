@@ -16,7 +16,7 @@ int main()
       while(!exit)
       {
 
-            std::cout << ".........................................\n";
+            std::cout << "\n.........................................\n";
             std::cout << "Please choose one of the following commands\n";
             std::cout << "1) insert\n2) remove\n3) deletemin\n4) deletemax\n";
             std::cout << "5) preorder\n6) inorder\n7) levelorder\n8) exit\n";
@@ -25,26 +25,26 @@ int main()
             {
                   std::cout << "What number do you want inserted in the tree?\n";
                   std::cin >> choice;
-                  if(bst->insert(choice))
+                  if(bst->insert(choice,bst->getRoot()))
                   {
-                        std::cout << choice << "Added Successfully\n";
+                        std::cout << choice << "\nAdded Successfully\n";
                   }
                   else
                   {
-                        std::cout << choice << "Was not added Successfully\n";
+                        std::cout << choice << "\nas not added Successfully\n";
                   }
             }
             else if(choice==2)
             {
-                  std::cout << "Which number do you want removed from the tree?\n";
+                  std::cout << "\nWhich number do you want removed from the tree?\n";
                   std::cin >> choice;
-                  if(bst->remove(choice))
+                  if(bst->remove(choice,bst->getRoot()))
                   {
-                        std::cout << choice << " Removed Successfully\n";
+                        std::cout << choice << "\n Removed Successfully\n";
                   }
                   else
                   {
-                        std::cout << choice << " Was not added Successfully\n";
+                        std::cout << choice << "\n Was not added Successfully\n";
                   }
             }
             else if(choice==3)
@@ -72,17 +72,18 @@ int main()
             else if(choice==5)
             {
                   std::cout << "Printing preorder:\n";
-                  bst->preorder();
+                  bst->preorder(bst->getRoot());
             }
             else if(choice==6)
             {
                   std::cout << "Printing inorder:\n";
-                  bst->inorder();
+                  bst->inorder(bst->getRoot());
             }
             else if(choice==7)
             {
                   std::cout << "Printing levelorder\n";
-                  bst->levelorder();
+                  bst->levelorder(bst->getRoot());
+//                  std::cout << "got here";
             }
             else if(choice==8)
             {

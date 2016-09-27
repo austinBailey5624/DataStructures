@@ -17,11 +17,14 @@ class Node
             void setValue(int value);
             Node* getLeft()const;
             void setLeft(Node* left);
-            Node* getRigt()const;
-            void setRight(Node* Right);
+            Node* getRight()const;
+            void setRight(Node* right);
+            Node* getNext()const;
+            void setNext(Node* next);
       private:
             Node* m_left;
             Node* m_right;
+            Node* m_next;//for use by queue
             int m_value;
 
 };
